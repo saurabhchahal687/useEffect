@@ -1,5 +1,6 @@
 import './App.css';
 import {useEffect,useState} from 'react'
+import Datafetcher from './components/Datafetcher'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -51,17 +52,18 @@ function App() {
 // }, [count])
 
 
- function handleClick(){
-  setCount(count+1);
- }
+//  function handleClick(){
+//   setCount(count+1);
+//  }
 
-function handleClickTotal(){
-  setTotal(total+1);
-}
+// function handleClickTotal(){
+//   setTotal(total+1);
+// }
 
   return (
     <div>
-      <button onClick={handleClick}>
+      <Datafetcher/>
+      {/* <button onClick={handleClick}>
         update count
       </button>
       <br/>
@@ -71,7 +73,7 @@ function handleClickTotal(){
         update Total
       </button>
       <br/>
-      total is : {total}
+      total is : {total} */}
     </div>
   );
 }

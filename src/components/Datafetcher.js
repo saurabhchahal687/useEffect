@@ -14,15 +14,17 @@ function DataFetcher(){
     }, []);
     // it will run on first render
 
-    return(
+    console.log('data', data);
+       return(
         <div>
             {loading ? (
                 <h1>Loading...</h1>
             ) : (
                 <ul>
-                    {data.map(post =>{
+                    {/* <li>here i am</li> */}
+                    {data && data.map(post =>
                         <li key={post.id}>{post.title}</li>
-                    })}
+                    )}
                 </ul>
             )}
         </div>
